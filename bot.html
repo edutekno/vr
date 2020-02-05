@@ -10,21 +10,32 @@
   <body>
     <a-scene background="color: #ECECEC">
       <a-assets>
-        <a-asset-item id="bird" response-type="arraybuffer" src="phoenix.glb"></a-asset-item>
+        <a-asset-item id="tree" src="treeb.glb"></a-asset-item>
         <a-asset-item id="man" response-type="arraybuffer" src="ManRunning.glb"></a-asset-item>
 		<a-asset-item id="bot" response-type="arraybuffer" src="botWalking.glb"></a-asset-item>
 		
       </a-assets>
+	  
+	  <a-assets>
+        <a-mixin id="text"
+          text="align: center; width: 9;
+               value: edutekno"
+        ></a-mixin>
+      </a-assets>
+	  
 <!--      <a-entity gltf-model="#bird" scale="0.01 0.01 0.01" animation-mixer="clip:Take 001; loop:2; timeScale: 5; crossFadeDuration: 1"></a-entity>-->
       <a-entity gltf-model="#man" position="1 1.5 -3" scale="0.5 0.5 0.5" animation-mixer="clip:mixamo.com; loop:2; timeScale: 2; crossFadeDuration: 1"></a-entity>
 
 	  <a-entity gltf-model="#bot" position="-1 1 -3" scale="0.5 0.5 0.5" animation-mixer="clip:mixamo.com; loop:2; timeScale: 2; crossFadeDuration: 1"></a-entity>
 
+	  	  <a-entity gltf-model="#tree" position="-2 0 -3" scale="0.5 0.5 0.5"></a-entity>
+	  
       <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
  
       <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="6" height="4" color="#7BC8A4" shadow></a-plane>
 	  <a-entity text="value: EDUTEKNO;" position="-0 0 -1" color="#0000FF"></a-entity>
+	  <a-text mixin="text"  position="-0.2 4.5 -5" color="#cDC3EE" wrap-count="20" shadow font="kelsonsans"></a-text>
     </a-scene>
   </body>
 </html>
