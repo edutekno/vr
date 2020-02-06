@@ -13,7 +13,7 @@
         init: function() {
           this.el.addEventListener("click", function(e) {
             console.log(e.target)
-            e.target.setAttribute('rotate', '0 360 0');
+            e.target.setAttribute('rotate', {x: 0, y: 90, z: 0});
             });
           this.el.addEventListener("mouseenter", function(e) {
             console.log(e.target)
@@ -74,7 +74,7 @@
 	  
 	   <a-entity id="size" position="-0 2.3 -1"
                 animation="property: scale; to: 2 2 2; dir: alternate; loop: true"
-                text="color: brown; align: center; value: Amazing VR; width: 1.5">
+                text="color: brown; align: center; value: Amazing VR!; width: 1.5">
       </a-entity>
 	  
     </a-scene>
