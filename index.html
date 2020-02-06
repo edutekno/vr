@@ -13,7 +13,7 @@
         init: function() {
           this.el.addEventListener("click", function(e) {
             console.log(e.target)
-            e.target.setAttribute('rotate', {x: 0, y: 360, z: 0});
+            e.target.setAttribute('rotate', '0 360 0');
             });
           this.el.addEventListener("mouseenter", function(e) {
             console.log(e.target)
