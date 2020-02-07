@@ -13,7 +13,7 @@
         init: function() {
           this.el.addEventListener("click", function(e) {
             console.log(e.target)
-            e.target.setAttribute('rotate', '0 90 0');
+            e.target.setAttribute('rotation', '0 90 0');
             });
           this.el.addEventListener("mouseenter", function(e) {
             console.log(e.target)
@@ -43,6 +43,8 @@
 		<a-asset-item id="dropbox" response-type="arraybuffer" src="http://dl.dropboxusercontent.com/s/sp4tx0f50t25cek/botWalking.glb"></a-asset-item>
 		
 	--> 
+	      	  <a-asset-item id="myModelObj" src="house.obj"></a-asset-item>
+        <a-asset-item id="myModelMtl" src="house.mtl"></a-asset-item>
 		
       </a-assets>
 	  
@@ -77,6 +79,7 @@
                 text="color: brown; align: center; value: Amazing VR!; width: 1.5">
       </a-entity>
 	  
+	  <a-entity obj-model="obj: #myModelObj; mtl: #myModelMtl" rotation="0 35 0" position="0 0 4"></a-entity>
     </a-scene>
   </body>
 </html>
